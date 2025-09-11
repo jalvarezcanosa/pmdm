@@ -9,8 +9,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lanzar tostada"/>
-
-
+        android:text="Lanzar tostada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
