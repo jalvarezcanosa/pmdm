@@ -22,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Lanzar otra actividad"/>
+        android:text="Lanzar otra actividad"
+        android:id="@+id/bottomButton"/>
 
     <TextView
         android:layout_width="wrap_content"
