@@ -12,7 +12,8 @@
         android:text="Lanzar tostada"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/toastButton">
     </Button>
 
     <Button
@@ -22,5 +23,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Lanzar otra actividad"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No se incluye la mantequilla"
+        app:layout_constraintTop_toBottomOf="@id/toastButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
