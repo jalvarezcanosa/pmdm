@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(context, "MainActivity en segundo plano", Toast.LENGTH_LONG).show();
+    }
 }
