@@ -12,7 +12,7 @@ public class ClickHandler implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View view){
+    public void onClick(View view) {
         Toast.makeText(this.context, "¡No te quemes!", Toast.LENGTH_LONG).show();
     }
 

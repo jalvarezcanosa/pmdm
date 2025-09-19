@@ -9,5 +9,4 @@
         android:src="@drawable/kabuterimon"
         android:contentDescription="Un Digimon poderoso" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

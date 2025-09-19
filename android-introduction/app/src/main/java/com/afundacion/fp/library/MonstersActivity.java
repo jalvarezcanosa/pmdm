@@ -23,15 +23,13 @@ public class MonstersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_monsters);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Fragment1()).commit();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Fragment2()).commit();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Fragment3()).commit();
 
         BottomNavigationView bar = findViewById(R.id.bottomNavigation);
         bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.item1){
-                    Toast.makeText(context,"Has clicado el Digimon 1", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,"Has clicado en Digimon 1", Toast.LENGTH_LONG).show();
                     Fragment myFragment = new Fragment1();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, myFragment).commit();
 
