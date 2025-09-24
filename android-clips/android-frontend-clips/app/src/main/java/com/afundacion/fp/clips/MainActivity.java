@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
-                Server.name + "/health",
+                Server.name + "/health2",
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -43,8 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 },
                 new Response.ErrorListener() {
                     @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        
+                    public void onErrorResponse(VolleyError error) {
+                        if (error.networkResponse == null) {
+                            Toast.makeText(context, "Server could not be reached", Toast.LENGTH_SHORT).show();
+                        }else {
+                            int serverCode = error.networkResponse.statusCode;
+                            Toast.makeText(context, "Server replied with " + serverCode, Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
         );
