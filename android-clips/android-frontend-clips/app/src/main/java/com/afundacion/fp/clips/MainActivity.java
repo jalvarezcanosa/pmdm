@@ -78,7 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-
+                        if (volleyError.networkResponse == null){
+                            Snackbar.make(mainLayout, "Server could not be reached", Snackbar.LENGTH_LONG).show();
+                        }else {
+                            int serverCode = volleyError.networkResponse.statusCode;
+                            Snackbar.make(mainLayout, "Server status is " + serverCode, Snackbar.LENGTH_LONG).show();
+                        }
                     }
                 }
 
