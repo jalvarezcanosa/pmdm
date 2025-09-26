@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"> <!-- se pone wrap_content para que -->
+<!--    no ocupe toda la pantalla ya que esto es una sola casilla de las que irán dentro del recyclerView-->
+
+    <TextView
+        android:layout_width="29sp"
+        android:layout_height="29sp"
+        android:id="@+id/text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginBaseline="1dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
