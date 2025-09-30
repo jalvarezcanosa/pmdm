@@ -11,7 +11,11 @@ public class ClipViewHolder extends RecyclerView.ViewHolder {
 
     public ClipViewHolder(@NonNull View itemView) {
         super(itemView);
-        clipTitle = itemView.findViewById(R.id.recycler_view);
+        clipTitle = itemView.findViewById(R.id.text_view);
+    }
+
+    public void showData(Clip clip) {
+        this.clipTitle.setText(clip.getTitle());
     }
 
 }
