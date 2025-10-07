@@ -5,20 +5,40 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class VideoActivity extends AppCompatActivity {
     public static final String INTENT_CLIP_ID = "CLIP_ID";
     public static final String INTENT_CLIP_URL = "CLIP_URL";
     private VideoView videoView;
     private Activity activity = this;
+    private RecyclerView recyclerView;
+    private RequestQueue queue;
+    private CharactersList charactersOnScreen;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
+
+        queue = Volley.newRequestQueue(this); // Nueva cola. Idealmente, en una app, se comparte una sola RequestQueue
+        recyclerView = findViewById(R.id.recycler_view_characters); // Buscamos por ID el recyclerView recién añadido
 
         Intent intent = getIntent(); // Con esto accedemos al Intent que se usó para iniciar la actividad
         int clipId = intent.getIntExtra(VideoActivity.INTENT_CLIP_ID, -1);
@@ -35,5 +55,55 @@ public class VideoActivity extends AppCompatActivity {
                 activity.finish();
             }
         });
+
+        videoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // clipId fue inicializado más arriba, a traves los 'Extras'
+                // .getCurrentPosition() devuelve el milisegundo actual del vídeo
+                sendAppearancesRequest(clipId, videoView.getCurrentPosition());
+            }
+        });
+
     }
+
+    private void sendAppearancesRequest(int clipId, int milliseconds) {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                Request.Method.GET,
+                Server.name + "/clips/" + clipId + "/appearances?" + "milliseconds=" + milliseconds,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        CharactersList parsedServerResponse = null;
+                        try {
+                            parsedServerResponse = new CharactersList(response);
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                        setCharactersOnScreen(parsedServerResponse);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        if (volleyError.networkResponse == null){
+                            Toast.makeText(VideoActivity.this, "Server could not be reached", Toast.LENGTH_SHORT).show();
+                        }else {
+                            int serverCode = volleyError.networkResponse.statusCode;
+                            Toast.makeText(VideoActivity.this, "Server status is: " + serverCode, Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
+        queue.add(jsonArrayRequest);
+    }
+
+    private void setCharactersOnScreen(CharactersList charactersOnScreen) {
+        this.charactersOnScreen = charactersOnScreen;
+        CharactersAdapter myAdapter = new CharactersAdapter(this.charactersOnScreen);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
 }
