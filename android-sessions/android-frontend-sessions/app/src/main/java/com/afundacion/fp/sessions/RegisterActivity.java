@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.ServerError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -45,8 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         requestQueue = Volley.newRequestQueue(this);
-
-
+        
     }
 
     private void sendPostRequest(){
@@ -71,7 +71,13 @@ public class RegisterActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        if (error.networkResponse == null) {
+                            Toast.makeText(context, "La conexión no se ha establecido", Toast.LENGTH_LONG).show();
+                        }else{
+                            int serverCode = error.networkResponse.statusCode;
 
+                            Toast.makeText(context, "Código de respuesta: "+ serverCode, Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
         );
