@@ -25,7 +25,6 @@ public class ClipsAdapter extends RecyclerView.Adapter<ClipViewHolder> {
         //    ¡Y ya está listo!
         ClipViewHolder cellViewHolder = new ClipViewHolder(cellView);
         return cellViewHolder;
-
     }
 
     @Override

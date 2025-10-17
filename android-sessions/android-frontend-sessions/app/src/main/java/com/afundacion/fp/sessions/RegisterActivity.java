@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.ServerError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -34,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         editTextUser = findViewById(R.id.edit_text_1);
         editTextPassword = findViewById(R.id.edit_text_2);
-        buttonRegister = findViewById(R.id.buttoncrear_usuario);
+        buttonRegister = findViewById(R.id.button_crear_usuario);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(context, "Cuenta creada con éxito", Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
