@@ -2,6 +2,7 @@ package com.afundacion.fp.sessions;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -81,8 +82,15 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
                         Toast.makeText(context, "Token " + receivedToken, Toast.LENGTH_SHORT).show();
+
+                        SharedPreferences preferences = context.getSharedPreferences("SESSIONS_APP_PREFS", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("VALID_USERNAME", username.getText().toString());
+                        editor.commit();
+
                         Intent intent = new Intent(LoginActivity.this, StatusActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
