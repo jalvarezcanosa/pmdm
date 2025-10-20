@@ -81,6 +81,8 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
                         Toast.makeText(context, "Token " + receivedToken, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, StatusActivity.class);
+                        startActivity(intent);
                     }
                 },
                 new Response.ErrorListener() {
