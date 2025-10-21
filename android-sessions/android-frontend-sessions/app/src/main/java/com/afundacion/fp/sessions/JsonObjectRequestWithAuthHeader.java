@@ -19,7 +19,7 @@ public class JsonObjectRequestWithAuthHeader extends JsonObjectRequest {
 
     public JsonObjectRequestWithAuthHeader(int method, String url, @Nullable JSONObject jsonRequest, Response.Listener<JSONObject> listener, @Nullable Response.ErrorListener errorListener, Context context) {
         super(method, url, jsonRequest, listener, errorListener);
-        this.context = this.context;
+        this.context = context;
     }
 
     @Override
