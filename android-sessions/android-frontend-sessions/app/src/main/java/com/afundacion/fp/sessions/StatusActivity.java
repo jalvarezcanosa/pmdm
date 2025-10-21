@@ -3,6 +3,7 @@ package com.afundacion.fp.sessions;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,16 +18,19 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class StatusActivity extends AppCompatActivity {
     private Context context = this;
     private RequestQueue queue;
+    private TextView textViewStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
+        textViewStatus = findViewById(R.id.text_status);
         // Inicializamos la cola de peticiones y preparamos la petición inicial
         queue = Volley.newRequestQueue(this);
         getUserStatus();
@@ -37,7 +41,7 @@ public class StatusActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("SESSIONS_APP_PREFS", MODE_PRIVATE);
         String username = preferences.getString("VALID_USERNAME", null); // null será el valor por defecto
         // Mandaremos la petición GET
-        JsonObjectRequest request = new JsonObjectRequest(
+        JsonObjectRequestWithAuthHeader request = new JsonObjectRequestWithAuthHeader(
                 Request.Method.GET,
                 Server.name + "/users/" + username + "/status",
                 null,
@@ -45,6 +49,11 @@ public class StatusActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(context, "Estado obtenido", Toast.LENGTH_LONG).show();
+                        try {
+                            textViewStatus.setText(response.getString("status"));
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
                     }
                 },
                 new Response.ErrorListener() {
@@ -52,7 +61,8 @@ public class StatusActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(context, "Estado KO", Toast.LENGTH_LONG).show();
                     }
-                }
+                },
+                context
         );
         queue.add(request);
     }

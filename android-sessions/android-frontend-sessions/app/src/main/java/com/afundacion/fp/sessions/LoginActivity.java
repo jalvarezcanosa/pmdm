@@ -86,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPreferences preferences = context.getSharedPreferences("SESSIONS_APP_PREFS", MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putString("VALID_USERNAME", username.getText().toString());
+                        editor.putString("VALID_TOKEN", receivedToken);
                         editor.commit();
 
                         Intent intent = new Intent(LoginActivity.this, StatusActivity.class);
