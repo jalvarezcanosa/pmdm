@@ -5,9 +5,6 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="T007LoginRequest">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="T008LoginRequestCanFail">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
@@ -17,7 +14,10 @@
       <SelectionState runConfigName="T010UsingSharedPreferences">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="T011Authentication">
+      <SelectionState runConfigName="T006ActivityForLogin">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="T007LoginRequest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

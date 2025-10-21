@@ -49,6 +49,7 @@ public class StatusActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(context, "Cambiar a: " + editTextUpdateStatus.getText().toString(), Toast.LENGTH_LONG).show();
+                        sendUpdateStatusRequest();
                     }
                 });
 
@@ -60,6 +61,40 @@ public class StatusActivity extends AppCompatActivity {
         // Inicializamos la cola de peticiones y preparamos la petición inicial
         queue = Volley.newRequestQueue(this);
         getUserStatus();
+    }
+
+    private void sendUpdateStatusRequest() {
+        SharedPreferences preferences = getSharedPreferences("SESSIONS_APP_PREFS", MODE_PRIVATE);
+        String username = preferences.getString("VALID_USERNAME", null);
+
+        JSONObject requestBody = new JSONObject();
+        try {
+            requestBody.put("status", editTextUpdateStatus.getText().toString());
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
+        JsonObjectRequestWithAuthHeader request = new JsonObjectRequestWithAuthHeader(
+                Request.Method.PUT,
+                Server.name + "/users/" + username + "/status",
+                requestBody,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        textViewStatus.setText("Cargando...");
+                        getUserStatus();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(context, "MAL PUT TONTÍN", Toast.LENGTH_SHORT).show();
+                    }
+                },
+                context
+        );
+        queue.add(request);
+
     }
 
     private void getUserStatus() {
