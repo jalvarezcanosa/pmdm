@@ -16,9 +16,9 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * 100.0
 	
 	if direction.x > 0:
-		%Ghost.scale.x = 1
-	elif direction.x < 0:
 		%Ghost.scale.x = -1
+	elif direction.x < 0:
+		%Ghost.scale.x = 1
 
 	move_and_slide()
 
