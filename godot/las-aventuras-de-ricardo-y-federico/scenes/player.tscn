@@ -1,19 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvuaatc0r54pc"]
+[gd_scene load_steps=7 format=3 uid="uid://bvuaatc0r54pc"]
 
-[ext_resource type="Texture2D" uid="uid://clumi2par06ms" path="res://assets/RicYFed/FEDPERSPECTIVA.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cjgjnrgly4bwq" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://ctq7g2mx7cccf" path="res://assets/RicYFed/federico.png" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://djgy0vipki11v" path="res://scenes/weapon.tscn" id="3_qhqgy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2els")
+"texture": SubResource("AtlasTexture_qhqgy")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
@@ -22,13 +23,12 @@ animations = [{
 radius = 7.0
 height = 20.0
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_qhqgy")
-autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -38,4 +38,6 @@ shape = SubResource("CapsuleShape2D_dqkch")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.25, 2.25)
 position_smoothing_enabled = true
-position_smoothing_speed = 50.0
+position_smoothing_speed = 10.0
+
+[node name="weapon" parent="." instance=ExtResource("3_qhqgy")]

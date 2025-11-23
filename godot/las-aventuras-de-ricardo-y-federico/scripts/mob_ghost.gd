@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var player
+var health = 3
 
 
 func _ready():
@@ -13,3 +14,9 @@ func _physics_process(delta: float) -> void:
 	
 
 	move_and_slide()
+
+func take_damage():
+	health -= 1
+	
+	if health == 0:
+		queue_free()

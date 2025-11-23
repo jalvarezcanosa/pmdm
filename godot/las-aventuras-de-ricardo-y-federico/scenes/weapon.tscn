@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://djgy0vipki11v"]
+
+[ext_resource type="Script" uid="uid://cr8g1d2tljafh" path="res://scripts/weapon.gd" id="1_xasec"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6nu22"]
+radius = 216.00926
+
+[node name="Weapon" type="Area2D"]
+position = Vector2(0, -20)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_xasec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6nu22")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot"]
+unique_name_in_owner = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

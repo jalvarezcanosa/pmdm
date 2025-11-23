@@ -13,18 +13,21 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lok3n")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eur75"]
 radius = 11.0
 
-[node name="mob_ghost" type="CharacterBody2D"]
+[node name="MobGhost" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_lok3n")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="GhostSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ygq2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

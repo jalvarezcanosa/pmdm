@@ -1631,3 +1631,9 @@ tile_set = SubResource("TileSet_fsry6")
 
 [node name="mob_ghost" parent="." instance=ExtResource("40_m4url")]
 position = Vector2(162, -77)
+
+[node name="mob_ghost2" parent="." instance=ExtResource("40_m4url")]
+position = Vector2(129, -129)
+
+[node name="mob_ghost3" parent="." instance=ExtResource("40_m4url")]
+position = Vector2(144, -7)
