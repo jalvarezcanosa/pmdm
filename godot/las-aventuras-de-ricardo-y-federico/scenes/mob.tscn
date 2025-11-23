@@ -12,6 +12,7 @@ collision_mask = 3
 script = ExtResource("1_lok3n")
 
 [node name="Ghost" parent="." instance=ExtResource("2_bsing")]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)

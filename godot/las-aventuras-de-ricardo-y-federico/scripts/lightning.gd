@@ -3,7 +3,7 @@ extends Area2D
 var travelled_distance = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	const SPEED = 1000
+	const SPEED = 500
 	const RANGE = 1200
 	
 	var direction = Vector2.RIGHT.rotated(rotation)

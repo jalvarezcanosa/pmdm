@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://berit7c5sum4o"]
+[gd_scene load_steps=7 format=3 uid="uid://berit7c5sum4o"]
 
 [ext_resource type="Script" uid="uid://cgxyuyp3a72mt" path="res://scripts/ghost.gd" id="1_l5lq6"]
 [ext_resource type="Texture2D" uid="uid://cr4k2hipnm2u7" path="res://assets/RicYFed/FANTASMA.png" id="2_bbnym"]
+[ext_resource type="Texture2D" uid="uid://md3nctefs8k5" path="res://assets/RicYFed/damagedfant.png" id="2_veat2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mfnq"]
+atlas = ExtResource("2_veat2")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lok3n"]
 atlas = ExtResource("2_bbnym")
@@ -11,10 +16,21 @@ region = Rect2(0, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5mfnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mfnq")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lok3n")
 }],
 "loop": false,
-"name": &"default",
+"name": &"walk",
 "speed": 10.0
 }]
 
@@ -24,3 +40,5 @@ script = ExtResource("1_l5lq6")
 [node name="GhostSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_veat2")
+animation = &"hurt"
+autoplay = "walk"

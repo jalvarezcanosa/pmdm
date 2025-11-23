@@ -76,20 +76,20 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_k2dum"]
 radius = 3.0
 
-[node name="lightning" type="Area2D"]
+[node name="Lightning" type="Area2D"]
 top_level = true
 collision_layer = 0
 collision_mask = 3
 script = ExtResource("1_qg4np")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(23, 0)
+position = Vector2(12, -1)
 scale = Vector2(0.114834964, 0.12457186)
 sprite_frames = SubResource("SpriteFrames_wwb6x")
-frame_progress = 0.59873664
+frame_progress = 0.7289726
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(34, 0)
+position = Vector2(23, -1)
 shape = SubResource("CircleShape2D_k2dum")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
