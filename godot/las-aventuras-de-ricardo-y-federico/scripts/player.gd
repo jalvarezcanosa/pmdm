@@ -25,6 +25,12 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+	if player_sprite_2d.animation != "hurt":
+		if velocity.length() > 0:
+			player_sprite_2d.play("walk")
+		else:
+			player_sprite_2d.play("idle")
+	
 	const DAMAGE_RATE = 5.0
 	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
