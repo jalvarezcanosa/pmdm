@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cysy6bhc2w23a"]
+
+[ext_resource type="Script" uid="uid://bddl2kwhb2uaw" path="res://scripts/goblin.gd" id="1_4yait"]
+[ext_resource type="Texture2D" uid="uid://cayxd2csw55nh" path="res://assets/RicYFed/goblinladoydamage.png" id="2_4yait"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3g0h"]
+atlas = ExtResource("2_4yait")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76chb"]
+atlas = ExtResource("2_4yait")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1p1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3g0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3g0h")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76chb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[node name="Goblin" type="Node2D"]
+script = ExtResource("1_4yait")
+
+[node name="GoblinSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_g1p1y")
+animation = &"hurt"

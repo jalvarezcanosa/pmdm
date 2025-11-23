@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
+signal health_depleted
 
 const SPEED = 200.0
 var health = 100.0
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var player_sprite_2d: AnimatedSprite2D = $PlayerSprite2D
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -12,9 +13,9 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if direction.x > 0:
-		animated_sprite.flip_h = false
+		player_sprite_2d.flip_h = false
 	elif direction.x < 0:
-		animated_sprite.flip_h = true
+		player_sprite_2d.flip_h = true
 	
 	if direction:
 		velocity = direction * SPEED
@@ -24,3 +25,17 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
+	const DAMAGE_RATE = 5.0
+	var overlapping_mobs = %Hurtbox.get_overlapping_bodies()
+	if overlapping_mobs.size() > 0:
+		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
+		play_hurt()
+		%ProgressBar.value = health
+		if health <= 0.0:
+			health_depleted.emit()
+			
+func play_hurt():
+	player_sprite_2d.play("hurt")
+	await player_sprite_2d.animation_finished
+	
+	player_sprite_2d.play("walk")

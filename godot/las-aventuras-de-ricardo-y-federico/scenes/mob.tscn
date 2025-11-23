@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://berit7c5sum4o" path="res://scenes/ghost.tscn" id="2_bsing"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4cuo"]
-radius = 11.0
+radius = 15.0
 
 [node name="Mob" type="CharacterBody2D"]
 collision_layer = 2

@@ -40,5 +40,5 @@ script = ExtResource("1_l5lq6")
 [node name="GhostSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_veat2")
-animation = &"hurt"
+animation = &"walk"
 autoplay = "walk"
