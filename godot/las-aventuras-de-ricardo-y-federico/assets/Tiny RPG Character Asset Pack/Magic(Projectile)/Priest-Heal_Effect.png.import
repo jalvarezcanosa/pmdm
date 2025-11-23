@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm5rpdoyrwcj8"
-path="res://.godot/imported/Priest-Heal_Effect.png-4434e223e8f6ff89914f487b77631750.ctex"
+path="res://.godot/imported/Priest-Heal_Effect.png-b759bf4334d6825301ebc543f410466d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Magic(Projectile)/Priest-Heal_Effect.png"
-dest_files=["res://.godot/imported/Priest-Heal_Effect.png-4434e223e8f6ff89914f487b77631750.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Magic(Projectile)/Priest-Heal_Effect.png"
+dest_files=["res://.godot/imported/Priest-Heal_Effect.png-b759bf4334d6825301ebc543f410466d.ctex"]
 
 [params]
 

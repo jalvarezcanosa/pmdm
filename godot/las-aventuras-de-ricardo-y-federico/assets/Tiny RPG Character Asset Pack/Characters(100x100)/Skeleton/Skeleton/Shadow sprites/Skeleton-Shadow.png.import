@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk4e8nq0w1v0h"
-path="res://.godot/imported/Skeleton-Shadow.png-352903a1303ab5e69c3926069b3ae888.ctex"
+path="res://.godot/imported/Skeleton-Shadow.png-4a69d7852d45cae1b6a4478383f9bc19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Skeleton/Skeleton/Shadow sprites/Skeleton-Shadow.png"
-dest_files=["res://.godot/imported/Skeleton-Shadow.png-352903a1303ab5e69c3926069b3ae888.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Skeleton/Skeleton/Shadow sprites/Skeleton-Shadow.png"
+dest_files=["res://.godot/imported/Skeleton-Shadow.png-4a69d7852d45cae1b6a4478383f9bc19.ctex"]
 
 [params]
 

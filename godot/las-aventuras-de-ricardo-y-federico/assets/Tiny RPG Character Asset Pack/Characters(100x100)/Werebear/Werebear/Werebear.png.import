@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mgvyjixhgo5p"
-path="res://.godot/imported/Werebear.png-ba8de32d012b7f30455464a26c45958b.ctex"
+path="res://.godot/imported/Werebear.png-af477560c1f717fd07791c4d3833173b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Werebear/Werebear/Werebear.png"
-dest_files=["res://.godot/imported/Werebear.png-ba8de32d012b7f30455464a26c45958b.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Werebear/Werebear/Werebear.png"
+dest_files=["res://.godot/imported/Werebear.png-af477560c1f717fd07791c4d3833173b.ctex"]
 
 [params]
 

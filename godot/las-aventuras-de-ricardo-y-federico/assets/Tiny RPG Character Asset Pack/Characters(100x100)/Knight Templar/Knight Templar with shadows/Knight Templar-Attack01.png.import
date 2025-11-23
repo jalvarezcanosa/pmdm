@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doqy7tded3h11"
-path="res://.godot/imported/Knight Templar-Attack01.png-f478ebe5e5c8ca4a689eb7b6a2377155.ctex"
+path="res://.godot/imported/Knight Templar-Attack01.png-876c4cd114d24a8612ae63bed8d493ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Knight Templar/Knight Templar with shadows/Knight Templar-Attack01.png"
-dest_files=["res://.godot/imported/Knight Templar-Attack01.png-f478ebe5e5c8ca4a689eb7b6a2377155.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Knight Templar/Knight Templar with shadows/Knight Templar-Attack01.png"
+dest_files=["res://.godot/imported/Knight Templar-Attack01.png-876c4cd114d24a8612ae63bed8d493ad.ctex"]
 
 [params]
 

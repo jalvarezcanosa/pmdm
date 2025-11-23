@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2qilx2uvn4aj"]
+
+[ext_resource type="Script" uid="uid://dick8kv8ef3qn" path="res://scripts/mob.gd" id="1_lok3n"]
+[ext_resource type="PackedScene" uid="uid://berit7c5sum4o" path="res://scenes/ghost.tscn" id="2_bsing"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4cuo"]
+radius = 11.0
+
+[node name="Mob" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_lok3n")
+
+[node name="Ghost" parent="." instance=ExtResource("2_bsing")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_d4cuo")

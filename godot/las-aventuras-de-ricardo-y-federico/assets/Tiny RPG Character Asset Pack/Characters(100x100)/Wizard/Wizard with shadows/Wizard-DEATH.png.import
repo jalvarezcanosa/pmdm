@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0wtwlvareny3"
-path="res://.godot/imported/Wizard-DEATH.png-9e3f4addb65702756778894cfce4ee33.ctex"
+path="res://.godot/imported/Wizard-DEATH.png-fb304b7942e8f3932ffef86afb49781c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Wizard with shadows/Wizard-DEATH.png"
-dest_files=["res://.godot/imported/Wizard-DEATH.png-9e3f4addb65702756778894cfce4ee33.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Wizard/Wizard with shadows/Wizard-DEATH.png"
+dest_files=["res://.godot/imported/Wizard-DEATH.png-fb304b7942e8f3932ffef86afb49781c.ctex"]
 
 [params]
 

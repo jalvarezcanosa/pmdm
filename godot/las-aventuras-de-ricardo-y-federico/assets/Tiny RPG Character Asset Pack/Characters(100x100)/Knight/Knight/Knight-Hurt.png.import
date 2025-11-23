@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd2si0ilxu63d"
-path="res://.godot/imported/Knight-Hurt.png-259523392eb0e229cc777f20755fb6fb.ctex"
+path="res://.godot/imported/Knight-Hurt.png-dcb5942898d25b659dd52b7d3dcac521.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Knight/Knight/Knight-Hurt.png"
-dest_files=["res://.godot/imported/Knight-Hurt.png-259523392eb0e229cc777f20755fb6fb.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Knight/Knight/Knight-Hurt.png"
+dest_files=["res://.godot/imported/Knight-Hurt.png-dcb5942898d25b659dd52b7d3dcac521.ctex"]
 
 [params]
 

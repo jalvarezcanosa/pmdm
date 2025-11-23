@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdavjf1g606x4"
-path="res://.godot/imported/Knight-Block.png-3fc9ebf61f8896fe3b7b47523ad45249.ctex"
+path="res://.godot/imported/Knight-Block.png-00d4648fe0bbc0ff8c51ea93a94b58e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Knight/Knight with shadows/Knight-Block.png"
-dest_files=["res://.godot/imported/Knight-Block.png-3fc9ebf61f8896fe3b7b47523ad45249.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Knight/Knight with shadows/Knight-Block.png"
+dest_files=["res://.godot/imported/Knight-Block.png-00d4648fe0bbc0ff8c51ea93a94b58e8.ctex"]
 
 [params]
 

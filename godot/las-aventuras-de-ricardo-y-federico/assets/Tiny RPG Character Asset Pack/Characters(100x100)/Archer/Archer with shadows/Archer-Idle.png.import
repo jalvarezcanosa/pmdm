@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bibktnshvug36"
-path="res://.godot/imported/Archer-Idle.png-5adacb9ad33b65e71bc2337b01a77a9d.ctex"
+path="res://.godot/imported/Archer-Idle.png-3c2c47f24d92d4aa7460270c1118cccc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png"
-dest_files=["res://.godot/imported/Archer-Idle.png-5adacb9ad33b65e71bc2337b01a77a9d.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Archer/Archer with shadows/Archer-Idle.png"
+dest_files=["res://.godot/imported/Archer-Idle.png-3c2c47f24d92d4aa7460270c1118cccc.ctex"]
 
 [params]
 

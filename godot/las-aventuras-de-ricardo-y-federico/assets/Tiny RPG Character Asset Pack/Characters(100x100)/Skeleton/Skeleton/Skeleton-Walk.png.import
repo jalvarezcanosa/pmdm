@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dute0iyp615c6"
-path="res://.godot/imported/Skeleton-Walk.png-00e03664b9bc220986d9df353113b658.ctex"
+path="res://.godot/imported/Skeleton-Walk.png-1e6db730ea4dbd68fccc28075a28d76c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Skeleton/Skeleton/Skeleton-Walk.png"
-dest_files=["res://.godot/imported/Skeleton-Walk.png-00e03664b9bc220986d9df353113b658.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Skeleton/Skeleton/Skeleton-Walk.png"
+dest_files=["res://.godot/imported/Skeleton-Walk.png-1e6db730ea4dbd68fccc28075a28d76c.ctex"]
 
 [params]
 

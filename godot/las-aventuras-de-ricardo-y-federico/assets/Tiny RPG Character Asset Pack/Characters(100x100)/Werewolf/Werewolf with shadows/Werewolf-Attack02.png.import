@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3mddgd75ihxy"
-path="res://.godot/imported/Werewolf-Attack02.png-1183bf3edc6502405f70890137dd076c.ctex"
+path="res://.godot/imported/Werewolf-Attack02.png-7e54b3aa5bf04eae7ea3a915a1480a11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Werewolf/Werewolf with shadows/Werewolf-Attack02.png"
-dest_files=["res://.godot/imported/Werewolf-Attack02.png-1183bf3edc6502405f70890137dd076c.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Werewolf/Werewolf with shadows/Werewolf-Attack02.png"
+dest_files=["res://.godot/imported/Werewolf-Attack02.png-7e54b3aa5bf04eae7ea3a915a1480a11.ctex"]
 
 [params]
 

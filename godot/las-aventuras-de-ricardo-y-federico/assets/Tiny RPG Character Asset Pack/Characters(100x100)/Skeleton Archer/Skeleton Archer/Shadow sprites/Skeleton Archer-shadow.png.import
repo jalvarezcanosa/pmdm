@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3nt5tsxkevx4"
-path="res://.godot/imported/Skeleton Archer-shadow.png-83cf07c216cc9659c4fd65864ee92ac3.ctex"
+path="res://.godot/imported/Skeleton Archer-shadow.png-676aa7a1c8b72b51cb49f8e18e5784b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Skeleton Archer/Skeleton Archer/Shadow sprites/Skeleton Archer-shadow.png"
-dest_files=["res://.godot/imported/Skeleton Archer-shadow.png-83cf07c216cc9659c4fd65864ee92ac3.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Skeleton Archer/Skeleton Archer/Shadow sprites/Skeleton Archer-shadow.png"
+dest_files=["res://.godot/imported/Skeleton Archer-shadow.png-676aa7a1c8b72b51cb49f8e18e5784b9.ctex"]
 
 [params]
 

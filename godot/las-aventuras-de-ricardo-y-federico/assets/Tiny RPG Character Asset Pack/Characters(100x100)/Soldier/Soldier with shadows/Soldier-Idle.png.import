@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mjnbjkivydi5"
-path="res://.godot/imported/Soldier-Idle.png-0ddad30c3145a92e313049790433cf48.ctex"
+path="res://.godot/imported/Soldier-Idle.png-5ed392228903f8a0827b50e0229ab997.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Idle.png"
-dest_files=["res://.godot/imported/Soldier-Idle.png-0ddad30c3145a92e313049790433cf48.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Idle.png"
+dest_files=["res://.godot/imported/Soldier-Idle.png-5ed392228903f8a0827b50e0229ab997.ctex"]
 
 [params]
 

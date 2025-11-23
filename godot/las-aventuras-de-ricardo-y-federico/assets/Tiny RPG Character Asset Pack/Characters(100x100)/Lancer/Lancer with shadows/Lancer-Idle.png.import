@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c86rkgjf7fo0w"
-path="res://.godot/imported/Lancer-Idle.png-2b5aae0f7aad6fc0bbd0017705bfb023.ctex"
+path="res://.godot/imported/Lancer-Idle.png-5668cbb921257b82149b8a4cd15df4b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Lancer/Lancer with shadows/Lancer-Idle.png"
-dest_files=["res://.godot/imported/Lancer-Idle.png-2b5aae0f7aad6fc0bbd0017705bfb023.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Lancer/Lancer with shadows/Lancer-Idle.png"
+dest_files=["res://.godot/imported/Lancer-Idle.png-5668cbb921257b82149b8a4cd15df4b9.ctex"]
 
 [params]
 

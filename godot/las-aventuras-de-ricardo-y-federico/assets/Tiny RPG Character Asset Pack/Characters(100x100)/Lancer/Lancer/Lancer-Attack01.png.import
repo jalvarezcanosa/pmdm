@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c51chsbgdwrp5"
-path="res://.godot/imported/Lancer-Attack01.png-88de8a630964b3c2302530f7eb6b8e8a.ctex"
+path="res://.godot/imported/Lancer-Attack01.png-bfc00b7be627107fce84f77aef4b3994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Lancer/Lancer/Lancer-Attack01.png"
-dest_files=["res://.godot/imported/Lancer-Attack01.png-88de8a630964b3c2302530f7eb6b8e8a.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Lancer/Lancer/Lancer-Attack01.png"
+dest_files=["res://.godot/imported/Lancer-Attack01.png-bfc00b7be627107fce84f77aef4b3994.ctex"]
 
 [params]
 

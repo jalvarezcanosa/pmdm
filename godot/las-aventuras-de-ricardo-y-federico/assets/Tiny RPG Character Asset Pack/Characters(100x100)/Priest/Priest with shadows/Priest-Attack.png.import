@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cq814yfyae3xj"
-path="res://.godot/imported/Priest-Attack.png-7428d0f7ec57162548d7ff8327907501.ctex"
+path="res://.godot/imported/Priest-Attack.png-d535c3bdedf13c76eca28acc9a781cd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Priest/Priest with shadows/Priest-Attack.png"
-dest_files=["res://.godot/imported/Priest-Attack.png-7428d0f7ec57162548d7ff8327907501.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Priest/Priest with shadows/Priest-Attack.png"
+dest_files=["res://.godot/imported/Priest-Attack.png-d535c3bdedf13c76eca28acc9a781cd9.ctex"]
 
 [params]
 

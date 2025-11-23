@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvc23d1uj03p2"
-path="res://.godot/imported/Lancer-Death.png-022e07744c37d66df685837d66953786.ctex"
+path="res://.godot/imported/Lancer-Death.png-feaf2e561fc60354f55036a90a0ce5c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Lancer/Lancer/Lancer-Death.png"
-dest_files=["res://.godot/imported/Lancer-Death.png-022e07744c37d66df685837d66953786.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Lancer/Lancer/Lancer-Death.png"
+dest_files=["res://.godot/imported/Lancer-Death.png-feaf2e561fc60354f55036a90a0ce5c8.ctex"]
 
 [params]
 

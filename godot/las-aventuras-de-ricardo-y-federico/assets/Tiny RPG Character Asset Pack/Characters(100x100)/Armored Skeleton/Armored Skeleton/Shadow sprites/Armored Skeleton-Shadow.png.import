@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o3n4jm34eymx"
-path="res://.godot/imported/Armored Skeleton-Shadow.png-5f6d4e4b30adbf567855544f8c3a1de7.ctex"
+path="res://.godot/imported/Armored Skeleton-Shadow.png-e7e8e70b7ebd6d3a7c4746ed474d0cc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Shadow sprites/Armored Skeleton-Shadow.png"
-dest_files=["res://.godot/imported/Armored Skeleton-Shadow.png-5f6d4e4b30adbf567855544f8c3a1de7.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Armored Skeleton/Armored Skeleton/Shadow sprites/Armored Skeleton-Shadow.png"
+dest_files=["res://.godot/imported/Armored Skeleton-Shadow.png-e7e8e70b7ebd6d3a7c4746ed474d0cc8.ctex"]
 
 [params]
 

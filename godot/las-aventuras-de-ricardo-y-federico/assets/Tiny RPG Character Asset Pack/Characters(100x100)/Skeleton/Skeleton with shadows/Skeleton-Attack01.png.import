@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxojgxs7a3eic"
-path="res://.godot/imported/Skeleton-Attack01.png-d65951c96a12dd294dc3f88e00bc5ba9.ctex"
+path="res://.godot/imported/Skeleton-Attack01.png-128b1e9cd0dd1c6cfd633257fc91b3b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Skeleton/Skeleton with shadows/Skeleton-Attack01.png"
-dest_files=["res://.godot/imported/Skeleton-Attack01.png-d65951c96a12dd294dc3f88e00bc5ba9.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Skeleton/Skeleton with shadows/Skeleton-Attack01.png"
+dest_files=["res://.godot/imported/Skeleton-Attack01.png-128b1e9cd0dd1c6cfd633257fc91b3b6.ctex"]
 
 [params]
 

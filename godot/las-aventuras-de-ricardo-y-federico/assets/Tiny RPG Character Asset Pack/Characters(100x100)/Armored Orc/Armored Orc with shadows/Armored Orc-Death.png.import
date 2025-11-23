@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dewlm22rr1esa"
-path="res://.godot/imported/Armored Orc-Death.png-02143f40d6e46567ca781de1a8b472d8.ctex"
+path="res://.godot/imported/Armored Orc-Death.png-4733527b8ed8b34a1cca0da2cd6caabf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png"
-dest_files=["res://.godot/imported/Armored Orc-Death.png-02143f40d6e46567ca781de1a8b472d8.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png"
+dest_files=["res://.godot/imported/Armored Orc-Death.png-4733527b8ed8b34a1cca0da2cd6caabf.ctex"]
 
 [params]
 

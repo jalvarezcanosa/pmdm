@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b420h6be8sc11"
-path="res://.godot/imported/Skeleton Archer.png-4517f845706e7af7095f5802c0a40e01.ctex"
+path="res://.godot/imported/Skeleton Archer.png-67dba13c20fb7bd14c748734b81580eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer.png"
-dest_files=["res://.godot/imported/Skeleton Archer.png-4517f845706e7af7095f5802c0a40e01.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer.png"
+dest_files=["res://.godot/imported/Skeleton Archer.png-67dba13c20fb7bd14c748734b81580eb.ctex"]
 
 [params]
 

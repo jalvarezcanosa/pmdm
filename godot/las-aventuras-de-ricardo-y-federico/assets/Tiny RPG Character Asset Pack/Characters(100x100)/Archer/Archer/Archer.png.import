@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b035f1dxa712w"
-path="res://.godot/imported/Archer.png-b695d3d6e0e3a3caff63b6434f35746a.ctex"
+path="res://.godot/imported/Archer.png-ce3ef9b022635a7eb71cdfa6f225ee89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Archer/Archer/Archer.png"
-dest_files=["res://.godot/imported/Archer.png-b695d3d6e0e3a3caff63b6434f35746a.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Archer/Archer/Archer.png"
+dest_files=["res://.godot/imported/Archer.png-ce3ef9b022635a7eb71cdfa6f225ee89.ctex"]
 
 [params]
 

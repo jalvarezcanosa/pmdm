@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw11ctdnkijc0"
-path="res://.godot/imported/Greatsword Skeleton-Attack03.png-22cc9229b5583f1a200bf4a0a790797a.ctex"
+path="res://.godot/imported/Greatsword Skeleton-Attack03.png-8410a11c50ebdfd26fcf001b6f66fe8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Attack03.png"
-dest_files=["res://.godot/imported/Greatsword Skeleton-Attack03.png-22cc9229b5583f1a200bf4a0a790797a.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Attack03.png"
+dest_files=["res://.godot/imported/Greatsword Skeleton-Attack03.png-8410a11c50ebdfd26fcf001b6f66fe8e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xkvgoi7naayw"
-path="res://.godot/imported/Wizard-Attack02_Effect.png-36b733e3ebf7cbe34fce9698f1f53099.ctex"
+path="res://.godot/imported/Wizard-Attack02_Effect.png-8398173044c707bfa628bb5a57a8c22b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Wizard/Magic(projectile)/Wizard-Attack02_Effect.png"
-dest_files=["res://.godot/imported/Wizard-Attack02_Effect.png-36b733e3ebf7cbe34fce9698f1f53099.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Wizard/Magic(projectile)/Wizard-Attack02_Effect.png"
+dest_files=["res://.godot/imported/Wizard-Attack02_Effect.png-8398173044c707bfa628bb5a57a8c22b.ctex"]
 
 [params]
 

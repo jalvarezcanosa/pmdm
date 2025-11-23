@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddjnurc3aap5n"
-path="res://.godot/imported/Armored Skeleton-Walk.png-be0c9457733ba8fdc72d6191ea033af9.ctex"
+path="res://.godot/imported/Armored Skeleton-Walk.png-538a9452e8b22c8438063c9cd84809b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Walk.png"
-dest_files=["res://.godot/imported/Armored Skeleton-Walk.png-be0c9457733ba8fdc72d6191ea033af9.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Walk.png"
+dest_files=["res://.godot/imported/Armored Skeleton-Walk.png-538a9452e8b22c8438063c9cd84809b8.ctex"]
 
 [params]
 

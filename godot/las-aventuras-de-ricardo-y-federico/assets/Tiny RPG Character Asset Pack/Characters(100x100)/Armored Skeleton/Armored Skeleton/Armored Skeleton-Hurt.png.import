@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buxjfqp0qhrbo"
-path="res://.godot/imported/Armored Skeleton-Hurt.png-997dc0345ad3475fbd0a3a455f42e205.ctex"
+path="res://.godot/imported/Armored Skeleton-Hurt.png-acdbfc34e83e33aedb6b12f639a726be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Full 20 Characters/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Hurt.png"
-dest_files=["res://.godot/imported/Armored Skeleton-Hurt.png-997dc0345ad3475fbd0a3a455f42e205.ctex"]
+source_file="res://assets/Tiny RPG Character Asset Pack/Characters(100x100)/Armored Skeleton/Armored Skeleton/Armored Skeleton-Hurt.png"
+dest_files=["res://.godot/imported/Armored Skeleton-Hurt.png-acdbfc34e83e33aedb6b12f639a726be.ctex"]
 
 [params]
 

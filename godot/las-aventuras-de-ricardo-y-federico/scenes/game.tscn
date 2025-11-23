@@ -39,7 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://yffsdf4rqav2" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/8.png" id="36_sxt1d"]
 [ext_resource type="Texture2D" uid="uid://vvb3dfme80tw" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/9.png" id="37_2iuns"]
 [ext_resource type="Texture2D" uid="uid://bxco68t2dme1p" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/10.png" id="38_7gkqi"]
-[ext_resource type="PackedScene" uid="uid://2qilx2uvn4aj" path="res://scenes/mob_ghost.tscn" id="40_m4url"]
+[ext_resource type="PackedScene" uid="uid://2qilx2uvn4aj" path="res://scenes/mob.tscn" id="40_m4url"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4url"]
 texture = ExtResource("1_7025r")
