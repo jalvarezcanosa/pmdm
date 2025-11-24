@@ -6,11 +6,27 @@ const SPEED = 100.0
 var health = 100.0
 
 @onready var player_sprite_2d: AnimatedSprite2D = $PlayerSprite2D
+@onready var camera_2d: Camera2D = $Camera2D
+
+@export_group("Controles")
+@export var input_left: String = "ui_left"
+@export var input_right: String = "ui_right"
+@export var input_up: String = "ui_up"
+@export var input_down: String = "ui_down"
+
+@export var has_camera: bool = true
+
+func _ready() -> void:
+	add_to_group("player")
+	
+	if not has_camera:
+		camera_2d.enabled = false
+		
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction := Input.get_vector(input_left, input_right, input_up, input_down)
 	
 	if direction.x > 0:
 		player_sprite_2d.flip_h = false

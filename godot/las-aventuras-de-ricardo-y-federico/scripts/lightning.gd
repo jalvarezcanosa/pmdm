@@ -1,6 +1,7 @@
 extends Area2D
 
 var travelled_distance = 0
+var shooter_id = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	const SPEED = 500
@@ -17,4 +18,4 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(shooter_id)

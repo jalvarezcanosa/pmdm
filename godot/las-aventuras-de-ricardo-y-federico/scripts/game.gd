@@ -7,12 +7,12 @@ extends Node2D
 
 
 var enemy_count = 0
-var score = 0
-
+var score1 = 0
+var score2 = 0
 
 func _ready() -> void:
 	update_score_label()
-
+	
 
 func spawn_mob():
 	if enemy_count >= max_mobs:
@@ -59,13 +59,22 @@ func _on_mob_deleted():
 	enemy_count -= 1
 	
 	
-func _on_mob_killed(points_earned):
-	score += points_earned
+func _on_mob_killed(points_earned, killer_id):
+	if killer_id == 1:
+		score1 += points_earned
+	elif killer_id == 2:
+		score2 += points_earned
+	else:
+		pass
+		
 	update_score_label()
 	
 	
 func update_score_label():
-	%ScoreLabel.text = "Score: " +str(score)
+	if %ScoreLabel1:
+		%ScoreLabel1.text = "Score: " +str(score1)
+	if %ScoreLabel2:
+		%ScoreLabel2.text = "Score: " +str(score2)
 
 
 func _on_timer_timeout() -> void:
@@ -73,5 +82,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_player_health_depleted() -> void:
+	%GameOver.visible = true
+	get_tree().paused = true
+
+
+func _on_player_2_health_depleted() -> void:
 	%GameOver.visible = true
 	get_tree().paused = true
