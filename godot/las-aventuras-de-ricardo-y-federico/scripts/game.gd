@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var foreground: TileMapLayer = $TilemapLayers/Foreground
 
+const BATTLE_MUSIC = preload("res://assets/RicYFed/sonidos/chiptune-grooving-142242.mp3")
 
 var enemy_count = 0
 var score1 = 0
@@ -84,8 +85,14 @@ func _on_timer_timeout() -> void:
 func _on_player_health_depleted() -> void:
 	%GameOver.visible = true
 	get_tree().paused = true
+	
+	if AudioManager:
+		AudioManager.stop_music()
 
 
 func _on_player_2_health_depleted() -> void:
 	%GameOver.visible = true
 	get_tree().paused = true
+	
+	if AudioManager:
+		AudioManager.stop_music()

@@ -129,16 +129,17 @@ vertical_alignment = 1
 
 [node name="OptionsPanel" type="Panel" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -211.0
-offset_top = -190.0
-offset_right = 212.0
-offset_bottom = 198.0
+offset_left = -210.0
+offset_top = -147.0
+offset_right = 213.0
+offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_brbbq")
@@ -162,26 +163,42 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_r67kn")
+theme_override_font_sizes/font_size = 37
 text = "OPTIONS"
 
 [node name="CheckButton" type="CheckButton" parent="OptionsPanel/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r67kn")
+theme_override_font_sizes/font_size = 21
 text = "FULLSCREEN"
 
 [node name="Volume" type="Label" parent="OptionsPanel/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r67kn")
+theme_override_font_sizes/font_size = 21
 text = "MASTER VOLUME:"
 
 [node name="SliderVolume" type="HSlider" parent="OptionsPanel/VBoxContainer"]
 layout_mode = 2
+value = 100.0
 
 [node name="ListaControles" type="RichTextLabel" parent="OptionsPanel/VBoxContainer"]
 layout_mode = 2
+text = "JUGADOR 1 (Federico):
+WASD - Moverse
+
+JUGADOR 2 (Ricardo):
+Flechas - Moverse"
 
 [node name="BtnVolver" type="Button" parent="OptionsPanel/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r67kn")
+theme_override_font_sizes/font_size = 21
 text = "BACK"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="OptionsPanel/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="OptionsPanel/VBoxContainer/SliderVolume" to="." method="_on_slider_volume_value_changed"]
+[connection signal="pressed" from="OptionsPanel/VBoxContainer/BtnVolver" to="." method="_on_btn_volver_pressed"]
