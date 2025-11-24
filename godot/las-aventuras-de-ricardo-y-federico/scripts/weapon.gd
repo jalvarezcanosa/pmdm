@@ -2,7 +2,6 @@ extends Area2D
 
 
 @export var player_id: int = 1
-@export var ammunition_scene: PackedScene
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -12,19 +11,15 @@ func _physics_process(delta: float) -> void:
 		look_at(target_enemy.global_position)
 
 func shoot():
-	if ammunition_scene == null:
-		print("¡ERROR! No has asignado un arma al Player ", player_id)
-		return
-		
-	var new_attack = ammunition_scene.instantiate()
+	const BULLET = preload("res://scenes/lightning.tscn")
+	var new_bullet = BULLET.instantiate()
+	new_bullet.global_position = %ShootingPoint.global_position
+	new_bullet.global_rotation = %ShootingPoint.global_rotation
 	
-	new_attack.global_position = %ShootingPoint.global_position
-	new_attack.global_rotation = %ShootingPoint.global_rotation
-	
-	if "shooter_id" in new_attack:
-		new_attack.shooter_id = player_id
+	if "shooter_id" in new_bullet:
+		new_bullet.shooter_id = player_id
 		
-	%ShootingPoint.add_child(new_attack)
+	%ShootingPoint.add_child(new_bullet)
 
 
 func _on_timer_timeout() -> void:
