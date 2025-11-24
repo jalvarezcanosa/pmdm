@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://ceo48sso4lqfa"]
+[gd_scene load_steps=20 format=3 uid="uid://ceo48sso4lqfa"]
 
 [ext_resource type="Script" uid="uid://cjgjnrgly4bwq" path="res://scripts/player.gd" id="1_0mr0g"]
 [ext_resource type="Texture2D" uid="uid://c3u5e2h8k3ki3" path="res://assets/RicYFed/damagedric.png" id="2_yjax8"]
 [ext_resource type="Texture2D" uid="uid://b7w2d0vi0isv2" path="res://assets/RicYFed/ricanimacion.png" id="3_oc1kf"]
+[ext_resource type="PackedScene" uid="uid://q2igyxuk41kv" path="res://scenes/damage_aura.tscn" id="4_oc1kf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkoe6"]
 atlas = ExtResource("2_yjax8")
@@ -49,16 +50,19 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hkoe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkoe6")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ne6jw")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -124,7 +128,7 @@ input_down = "p2_down"
 [node name="PlayerSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_13h5e")
-animation = &"walk"
+animation = &"hurt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -135,6 +139,8 @@ shape = SubResource("CapsuleShape2D_dqkch")
 zoom = Vector2(2.25, 2.25)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="DamageAura" parent="." instance=ExtResource("4_oc1kf")]
 
 [node name="Hurtbox" type="Area2D" parent="."]
 unique_name_in_owner = true

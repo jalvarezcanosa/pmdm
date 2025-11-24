@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://q2igyxuk41kv"]
+
+[ext_resource type="Script" uid="uid://cmy6146plkk74" path="res://scripts/damage_aura.gd" id="1_dh1w6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dh1w6"]
+specular_color = Color(0.038856726, 0.6643601, 0.6643745, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bgg8e"]
+radius = 44.011364
+
+[node name="DamageAura" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_dh1w6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_dh1w6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bgg8e")
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
