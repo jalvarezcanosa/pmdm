@@ -1692,7 +1692,7 @@ position = Vector2(-748, -319)
 rotation = -0.0006688962
 
 [node name="Player2" parent="." instance=ExtResource("44_0sl42")]
-position = Vector2(-44, 0)
+position = Vector2(-93, 0)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -1720,4 +1720,5 @@ text = "Score:"
 label_settings = SubResource("LabelSettings_05nbr")
 
 [connection signal="health_depleted" from="Player1" to="." method="_on_player_health_depleted"]
+[connection signal="health_depleted" from="Player2" to="." method="_on_player_2_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

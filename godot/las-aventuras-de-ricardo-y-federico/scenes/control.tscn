@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxycqt2mh808w"]
+[gd_scene load_steps=10 format=3 uid="uid://dxycqt2mh808w"]
 
 [ext_resource type="Texture2D" uid="uid://djstkmhodif00" path="res://assets/RicYFed/fondopergamino.png" id="1_5p55f"]
 [ext_resource type="Script" uid="uid://c341l4dcir1pa" path="res://scripts/control.gd" id="1_brbbq"]
@@ -30,6 +30,8 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r67kn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brbbq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -69,6 +71,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_r67kn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r67kn")
@@ -81,6 +84,7 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_r67kn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r67kn")
@@ -94,6 +98,7 @@ text = "Options
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_r67kn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r67kn")
@@ -118,9 +123,64 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_r67kn")
 theme_override_font_sizes/font_size = 45
-text = "Ricardo Y Federico"
+text = "Ricardo & Federico"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="OptionsPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -190.0
+offset_right = 212.0
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_brbbq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsPanel"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -109.5
+offset_right = 135.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="Label" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_r67kn")
+text = "OPTIONS"
+
+[node name="CheckButton" type="CheckButton" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="Volume" type="Label" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+text = "MASTER VOLUME:"
+
+[node name="SliderVolume" type="HSlider" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ListaControles" type="RichTextLabel" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnVolver" type="Button" parent="OptionsPanel/VBoxContainer"]
+layout_mode = 2
+text = "BACK"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]

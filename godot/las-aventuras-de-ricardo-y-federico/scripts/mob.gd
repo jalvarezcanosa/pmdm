@@ -8,6 +8,7 @@ signal mob_killed(points, killer_id)
 @export var health = 3
 @export var score_value: int = 100
 
+const SFX_DIE = preload("res://assets/RicYFed/sonidos/male_hurt7-48124.mp3")
 
 var players
 var last_attacker_id = 0
@@ -61,6 +62,8 @@ func take_damage(attacker_id = 0):
 func die():
 	is_dying = true
 	velocity = Vector2.ZERO 
+	
+	AudioManager.play_sfx(SFX_DIE)
 	
 	if visual_node:
 		await visual_node.play_hurt()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwyvc7gkuwuc5"]
+
+[ext_resource type="Script" uid="uid://cp330g5xv8em8" path="res://scripts/audio_manager.gd" id="1_8qd8g"]
+[ext_resource type="AudioStream" uid="uid://nn5whfn85nnp" path="res://assets/RicYFed/sonidos/chiptune-grooving-142242.mp3" id="2_liach"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_8qd8g")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_liach")

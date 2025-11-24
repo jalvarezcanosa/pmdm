@@ -19,8 +19,3 @@ func _on_damage_timer_timeout():
 		if body.has_method("take_damage") and not body.is_in_group("player"):
 			
 			body.take_damage(player_id)
-			
-			if body.get("visual_node"):
-				body.visual_node.modulate = Color.RED
-				await get_tree().create_timer(0.1).timeout
-				body.visual_node.modulate = Color.WHITE

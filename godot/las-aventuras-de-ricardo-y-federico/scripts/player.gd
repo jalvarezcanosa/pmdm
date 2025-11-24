@@ -16,8 +16,11 @@ var health = 100.0
 
 @export var has_camera: bool = true
 
+const BGM_GAME = preload("res://assets/RicYFed/sonidos/chiptune-grooving-142242.mp3")
+
 func _ready() -> void:
 	add_to_group("player")
+	AudioManager.play_music(BGM_GAME, -10.0)
 	
 	if not has_camera:
 		camera_2d.enabled = false
