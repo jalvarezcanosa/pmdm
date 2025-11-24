@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dey7iifuupgs3"]
+
+[ext_resource type="PackedScene" uid="uid://2qilx2uvn4aj" path="res://scenes/mob.tscn" id="1_xwpye"]
+[ext_resource type="PackedScene" uid="uid://cysy6bhc2w23a" path="res://scenes/goblin.tscn" id="2_lejhc"]
+
+[node name="Enemy_Goblin" node_paths=PackedStringArray("visual_node") instance=ExtResource("1_xwpye")]
+visual_node = NodePath("Goblin")
+SPEED = 40.0
+health = 5
+score_value = 300
+
+[node name="Goblin" parent="." index="0" instance=ExtResource("2_lejhc")]

@@ -1,15 +1,44 @@
-[gd_scene load_steps=6 format=3 uid="uid://cysy6bhc2w23a"]
+[gd_scene load_steps=14 format=3 uid="uid://cysy6bhc2w23a"]
 
 [ext_resource type="Script" uid="uid://bddl2kwhb2uaw" path="res://scripts/goblin.gd" id="1_4yait"]
 [ext_resource type="Texture2D" uid="uid://cayxd2csw55nh" path="res://assets/RicYFed/goblinladoydamage.png" id="2_4yait"]
+[ext_resource type="Texture2D" uid="uid://cw0024rn07xi5" path="res://assets/RicYFed/goblinanimacion.png" id="3_q3g0h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3g0h"]
 atlas = ExtResource("2_4yait")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_76chb"]
-atlas = ExtResource("2_4yait")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1p1y"]
+atlas = ExtResource("3_q3g0h")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkl8q"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyaat"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u21pb"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vho8j"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2t3q"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osho7"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exsy4"]
+atlas = ExtResource("3_q3g0h")
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g1p1y"]
 animations = [{
@@ -20,17 +49,38 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q3g0h")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_76chb")
+"texture": SubResource("AtlasTexture_g1p1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkl8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyaat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u21pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vho8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2t3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osho7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exsy4")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 10.0
+"speed": 6.0
 }]
 
 [node name="Goblin" type="Node2D"]
@@ -39,4 +89,4 @@ script = ExtResource("1_4yait")
 [node name="GoblinSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_g1p1y")
-animation = &"hurt"
+animation = &"walk"

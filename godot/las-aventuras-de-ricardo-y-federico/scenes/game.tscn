@@ -1,9 +1,11 @@
-[gd_scene load_steps=83 format=4 uid="uid://smypgebgdoxw"]
+[gd_scene load_steps=86 format=4 uid="uid://smypgebgdoxw"]
 
 [ext_resource type="Script" uid="uid://dbacw0k3ch4i8" path="res://scripts/game.gd" id="1_8ool0"]
 [ext_resource type="Texture2D" uid="uid://bu6jm4fuoqm2b" path="res://assets/RicYFed/purple_background.png" id="1_7025r"]
 [ext_resource type="PackedScene" uid="uid://bvuaatc0r54pc" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c4vo6v4atxrpn" path="res://scenes/enemy_ghost.tscn" id="2_05nbr"]
 [ext_resource type="Texture2D" uid="uid://d3e3l8nk4kej2" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/1.png" id="2_nepv3"]
+[ext_resource type="PackedScene" uid="uid://dey7iifuupgs3" path="res://scenes/enemy_goblin.tscn" id="3_0sl42"]
 [ext_resource type="Texture2D" uid="uid://7nx8145drbul" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/2.png" id="3_7025r"]
 [ext_resource type="Texture2D" uid="uid://bpqsufqm5e5iv" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/11.png" id="4_m4url"]
 [ext_resource type="Texture2D" uid="uid://bdhvncawqs03y" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/12.png" id="5_8ool0"]
@@ -1622,8 +1624,45 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="LabelSettings" id="LabelSettings_05nbr"]
+font = ExtResource("41_8ool0")
+font_color = Color(1, 1, 0, 1)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8ool0")
+mob_scenes = Array[PackedScene]([ExtResource("2_05nbr"), ExtResource("3_0sl42")])
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.70980394)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -28.5
+offset_right = 159.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.5647059, 0, 0, 1)
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
 
 [node name="TilemapLayers" type="Node2D" parent="."]
 
@@ -1647,40 +1686,17 @@ unique_name_in_owner = true
 position = Vector2(-748, -319)
 rotation = -0.0006688962
 
-[node name="GameOver" type="CanvasLayer" parent="player"]
-unique_name_in_owner = true
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="player/GameOver"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-color = Color(0, 0, 0, 0.70980394)
-
-[node name="Label" type="Label" parent="player/GameOver/ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -11.5
-offset_right = 46.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.5647059, 0, 0, 1)
-theme_override_fonts/font = ExtResource("41_8ool0")
-theme_override_font_sizes/font_size = 60
-text = "GAME OVER"
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 66.0
+offset_bottom = 16.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_05nbr")
 
 [connection signal="health_depleted" from="player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

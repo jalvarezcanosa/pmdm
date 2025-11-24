@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal health_depleted
 
-const SPEED = 200.0
+const SPEED = 100.0
 var health = 100.0
 
 @onready var player_sprite_2d: AnimatedSprite2D = $PlayerSprite2D

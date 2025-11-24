@@ -1,10 +1,27 @@
 extends Node2D
 	
-	
+@export var mob_scenes: Array[PackedScene] = []
+@export var max_mobs: int = 70
+
 @onready var foreground: TileMapLayer = $TilemapLayers/Foreground
 
 
+var enemy_count = 0
+var score = 0
+
+
+func _ready() -> void:
+	update_score_label()
+
+
 func spawn_mob():
+	if enemy_count >= max_mobs:
+		return
+		
+	if mob_scenes.is_empty():
+		print_debug("¡Error! No has asignado escenas en la lista 'Mob Scenes'")
+		return
+		
 	var max_attempts = 10
 	var attempts = 0
 	var spawn_pos = Vector2.ZERO
@@ -22,11 +39,33 @@ func spawn_mob():
 			break
 			
 		attempts += 1
+		
 	
 	if found_valid_pos:
-		var new_mob = preload("res://scenes/mob.tscn").instantiate()
+		var random_scene = mob_scenes.pick_random()
+		
+		var new_mob = random_scene.instantiate()
 		new_mob.global_position = spawn_pos
 		add_child(new_mob)
+		
+		enemy_count += 1
+		
+		new_mob.tree_exiting.connect(_on_mob_deleted)
+		
+		new_mob.mob_killed.connect(_on_mob_killed)
+
+
+func _on_mob_deleted():
+	enemy_count -= 1
+	
+	
+func _on_mob_killed(points_earned):
+	score += points_earned
+	update_score_label()
+	
+	
+func update_score_label():
+	%ScoreLabel.text = "Score: " +str(score)
 
 
 func _on_timer_timeout() -> void:
