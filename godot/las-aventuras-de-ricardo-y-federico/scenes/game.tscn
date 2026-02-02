@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=4 uid="uid://smypgebgdoxw"]
+[gd_scene load_steps=94 format=4 uid="uid://smypgebgdoxw"]
 
 [ext_resource type="Script" uid="uid://dbacw0k3ch4i8" path="res://scripts/game.gd" id="1_8ool0"]
 [ext_resource type="Texture2D" uid="uid://bu6jm4fuoqm2b" path="res://assets/RicYFed/purple_background.png" id="1_7025r"]
@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://bxco68t2dme1p" path="res://assets/Dungeon Tiles/Dungeon Tiles/Tiles/10.png" id="38_7gkqi"]
 [ext_resource type="FontFile" uid="uid://difhyng5scqnp" path="res://assets/RicYFed/fuentes/alagard/alagard.ttf" id="41_8ool0"]
 [ext_resource type="PackedScene" uid="uid://ceo48sso4lqfa" path="res://scenes/player_2.tscn" id="44_0sl42"]
+[ext_resource type="Texture2D" uid="uid://djstkmhodif00" path="res://assets/RicYFed/fondopergamino.png" id="45_oaba0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4url"]
 texture = ExtResource("1_7025r")
@@ -1629,9 +1630,39 @@ point_count = 5
 font = ExtResource("41_8ool0")
 font_color = Color(1, 1, 0, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_458eo"]
+texture = ExtResource("45_oaba0")
+modulate_color = Color(0.7708395, 0.77083945, 0.77083945, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3rex"]
+bg_color = Color(0.11097006, 0.00016824104, 0.27674302, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fedci"]
+bg_color = Color(0.05882353, 0, 0.1764706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qswn"]
+bg_color = Color(0.060485885, 7.0505535e-05, 0.17581844, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rm0al"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4re6"]
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8ool0")
 mob_scenes = Array[PackedScene]([ExtResource("2_05nbr"), ExtResource("3_0sl42")])
+max_mobs = null
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -1719,6 +1750,180 @@ grow_horizontal = 0
 text = "Score:"
 label_settings = SubResource("LabelSettings_05nbr")
 
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PauseMenu" type="Control" parent="PauseLayer"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PauseLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_458eo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.9375
+offset_top = -100.5
+offset_right = 143.9375
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="PauseLayer/PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fedci")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qswn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rm0al")
+text = "Continue"
+
+[node name="Button2" type="Button" parent="PauseLayer/PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fedci")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qswn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rm0al")
+text = "Options
+"
+
+[node name="Button3" type="Button" parent="PauseLayer/PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fedci")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qswn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_h3rex")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rm0al")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="PauseLayer/PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -191.0
+offset_right = 212.5
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 45
+text = "Ricardo & Federico"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionsPanel" type="Panel" parent="PauseLayer/PauseMenu"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -147.0
+offset_right = 213.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i4re6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseLayer/PauseMenu/OptionsPanel"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -109.5
+offset_right = 135.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="Label" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 37
+text = "OPTIONS"
+
+[node name="CheckButton" type="CheckButton" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 21
+text = "FULLSCREEN"
+
+[node name="Volume" type="Label" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 21
+text = "MASTER VOLUME:"
+
+[node name="SliderVolume" type="HSlider" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+value = 100.0
+
+[node name="ListaControles" type="RichTextLabel" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+text = "JUGADOR 1 (Federico):
+WASD - Moverse
+
+JUGADOR 2 (Ricardo):
+Flechas - Moverse"
+
+[node name="BtnVolver" type="Button" parent="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("41_8ool0")
+theme_override_font_sizes/font_size = 21
+text = "BACK"
+
 [connection signal="health_depleted" from="Player1" to="." method="_on_player_health_depleted"]
 [connection signal="health_depleted" from="Player2" to="." method="_on_player_2_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="PauseLayer/PauseMenu/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PauseLayer/PauseMenu/VBoxContainer/Button3" to="." method="_on_button_menu_pressed"]
+[connection signal="pressed" from="PauseLayer/PauseMenu/OptionsPanel/VBoxContainer/BtnVolver" to="." method="_on_btn_volver_opciones_pressed"]
